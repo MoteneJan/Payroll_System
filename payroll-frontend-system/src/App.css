@@ -1,0 +1,230 @@
+/* Global Styles */
+:root {
+  --color-bg: #b8b8bd;
+  --color-bgi: #efeff1;
+  --color-bg-variant: #fff;
+  --color-primary: #0038ef;
+  --color-primary-variant: rgba(49, 46, 46, 0.263);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+  --transition: all 400ms ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.6;
+}
+
+/* Main Container */
+.min-h-screen {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.max-w-4xl {
+  max-width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+/* Header */
+.text-3xl {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #787882;
+  margin-bottom: 2rem;
+}
+
+/* Form Container */
+.bg-white {
+  background-color: var(--color-bgi);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-xl {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Input Fields */
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-bg-variant);
+  border: 1px solid var(--color-primary-variant);
+  border-radius: 0.25rem;
+  color: #939191;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+input::placeholder {
+  color: #939191;
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-primary-variant);
+}
+
+button.cancel {
+  background-color: var(--color-bg-variant);
+  color: var(--color-white);
+}
+
+button.cancel:hover {
+  background-color: var(--color-bgi);
+}
+
+/* Table Styles */
+.bg-white {
+  background-color: var(--color-bgi);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-bg-variant);
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+th:hover {
+  background-color: var(--color-primary-variant);
+}
+
+tr {
+  border-bottom: 1px solid var(--color-bg-variant);
+}
+
+tr:hover {
+  background-color: var(--color-bg-variant);
+}
+
+td {
+  color: var(--color-light);
+}
+
+/* Action Buttons */
+button.edit {
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  margin-right: 0.5rem;
+}
+
+button.delete {
+  color: #ff4d4d;
+  background: none;
+  border: none;
+}
+
+button.edit:hover,
+button.delete:hover {
+  opacity: 0.8;
+}
+
+/* Search Bar */
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-bg-variant);
+  border: 1px solid var(--color-primary-variant);
+  border-radius: 0.25rem;
+  color: #000000;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input[type="text"]:focus {
+  border-color: #01010b;
+  outline: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .max-w-4xl {
+    max-width: var(--container-width-md);
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .max-w-4xl {
+    max-width: var(--container-width-sm);
+  }
+}
