@@ -31,6 +31,7 @@ The **Payroll Management System** is a web application that allows users to add,
    ```sh
    git clone https://github.com/MoteneJan/payroll_system.git
    cd payroll_system
+   cd payroll-backend-system
    ```
 2. Configure MySQL database in `application.properties`:
    ```properties
@@ -46,7 +47,7 @@ The **Payroll Management System** is a web application that allows users to add,
 ### Frontend Setup (React)
 1. Navigate to the frontend directory:
    ```sh
-   cd frontend
+   cd payroll-frontend-system
    ```
 2. Install dependencies:
    ```sh
